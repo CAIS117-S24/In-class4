@@ -26,4 +26,22 @@ def print_fibonacci(n):
     print()  
 
 print_fibonacci(5)  
+        
+        
+   
+
+
+#3
+
+def sierpinski(n, offset=0):
+    if n == 0:
+        print(' ' * offset + '^')
+    else:
+        sierpinski(n-1, offset + 2**(n-1))
+        sierpinski(n-1, offset)
+        sierpinski(n-1, offset + 2**n)
+
+# Example usage
+sierpinski(3)
+
 
